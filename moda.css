@@ -1,0 +1,428 @@
+ 
+ 
+ *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Arial, Helvetica, sans-serif;background:#f5f7fb;padding:30px}
+  
+#main-header {
+  position: relative; top: 0; width: 100%; z-index: 1000;
+  background: linear-gradient(90deg, rgb(255, 0, 0), #bb0300, #800404de);
+  color: rgb(255, 255, 255); box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+text-align: center;}
+
+header .container {
+  max-width: 1300px; margin: auto; padding: 1px 1%;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.logo-area { display: flex; align-items: center; gap: 20px; padding-right:1%; }
+.logo-area img { width: 80px; height: auto; }
+.logo-area h2 { font-weight: 700; font-size: 22px; letter-spacing: .3px; }
+.nav-menu ul { display: flex; list-style: none; gap: 18px; align-items:center;}
+.nav-menu ul li a { color: white; text-decoration: none; font-weight: 600; transition: 0.25s; }
+.nav-menu ul li a:hover { color: #fff9a6; transform: translateY(-2px); }
+.mobile-menu-icon { display: none; font-size: 28px; cursor: pointer; }
+
+
+
+#hero {
+  position: relative; width: 100%; height: 600px; margin-top: 0px;
+  background: linear-gradient(0deg, rgba(1,122,184,0.20), rgba(0,195,150,0.05)),
+  url(fundo.jpg) center/cover;
+  display: flex; align-items: center; justify-content: center;
+}
+.hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.3); }
+.hero-content { position: relative; text-align: center; color: white; max-width: 900px; padding: 20px; }
+.hero-content h1 { font-size: 56px; margin-bottom: 12px; font-weight: 700; text-shadow: 0 6px 18px rgba(0,0,0,0.45); }
+.hero-content p { font-size: 20px; margin-bottom: 18px; opacity: .95; }
+.cta-button {
+  background: #c00404c2; padding: 12px 58px; border-radius: 30px; color: white;
+  text-decoration: none; font-weight: 700; transition: transform .2s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+.cta-button:hover { transform: translateY(-3px); background: #d80707b6; }
+
+
+#textoSu{padding-bottom: 5%;
+
+
+}
+
+
+.apresentacao {
+  padding: 20px;
+  text-align: center;
+  background-color: rgb(249, 249, 249);
+}
+
+.apresentacao h2 {
+  color: rgb(230, 50, 50);
+}
+
+body,html{padding: 0;
+margin:0 ;
+}
+
+.galeria {
+  padding: 20px;
+  background-color: rgb(249, 249, 249);
+}
+
+.galeria h2 {
+  text-align: center;
+  color: rgb(230, 50, 50);
+}
+
+.imagens {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.imagens img {
+  border: 2px solid rgb(0, 0, 0);
+  width: 300px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+
+  .container{
+    max-width:800px;
+    margin: auto;
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+
+  .control{
+    background-color: rgb(255, 0, 21);
+    border: 0px;
+    font-size:34px;
+    line-height:1;
+    cursor:pointer;
+    width:46px;
+    height:46px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:8px;
+    user-select:none; /*fundo do carrocel*/
+  }
+  .arrow-left {
+  left: 10px; /* Seta à esquerda */
+}
+#esquerda{
+  float:left ;
+  bottom: 100%;  
+}
+.arrow-right {
+  right: 10px; /* Seta à direita */
+}
+#direita{
+  float: right;
+  
+}
+.control:hover {
+  background: rgba(0, 0, 0, 0.06); /* Hover para indicar interatividade */
+}
+
+  .gallery-wrapper{
+    overflow:hidden;
+    flex:1;
+  }
+
+  .gallery{
+    display:flex;
+    gap:15px;           /* gap usado no cálculo */
+    transition:transform 0.45s cubic-bezier(.2,.9,.2,1);
+    will-change:transform;
+    align-items:center;
+  }
+
+  /* cada "slide" - aqui estão como caixas de placeholder */
+  .item{
+    min-width:250px;    /* largura do slide */
+    height:250px;
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:8px;
+    background:linear-gradient(135deg,#f26156bc,#dff0e6);
+    color:rgb(230, 50, 50);
+    font-weight:700;
+    font-size:20px;
+    box-shadow:0 6px 18px rgba(16, 78, 203, 0.06);
+    transition:transform .28s ease, box-shadow .28s ease, opacity .28s ease;
+    opacity:1;
+  }
+.Csobre{
+padding-top: 5%;
+  color: rgb(230, 50, 50);
+}
+  /* Se preferir imagens reais, substitua o conteúdo do .item por <img class="photo" src="..."> e use essa regra: */
+  .photo{ width:100%; height:100%; object-fit:cover; display:block; border-radius:200px; }
+
+  /* destaque do ativo */
+  .current-item{
+    transform:scale(1.06);
+    opacity:1;
+    box-shadow:0 18px 40px rgba(20,30,50,0.12);
+  }
+
+  /* responsividade */
+  @media (max-width:600px){
+    .item{min-width:180px; height:180px}
+  }
+
+  .coluna {   
+    float: left;
+    padding: 3% 5%;
+    position: relative;
+}
+
+.dois {
+    width: 50%;
+
+}
+
+.quatro {
+    width: 25%;
+}
+
+.tres {
+    width: 33%;
+    padding:0 1% 0 1%;
+}
+
+.justificado {
+    text-align: justify;
+}
+
+.centralizado {
+    text-align: center;
+}
+
+
+
+
+  .footer-bb {
+  width: 100%;
+  background: linear-gradient(90deg,#800404 , #bb0300, rgb(255, 0, 0));
+  color: white;
+  font-family: "Poppins", sans-serif;
+  margin-top: 60px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+  padding: 50px 5%;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  box-sizing: border-box;
+}
+
+.footer-col {
+  flex: 1 1 250px;
+  min-width: 220px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #1dc1a5; 
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.footer-col p {
+  font-size: 14px;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: 0.3s;
+  
+}
+
+/*#FDireita{
+  text-align: right;
+}*/
+
+.footer-col ul li a:hover {
+  color: #ffdf00;
+  text-decoration: underline;
+}
+
+.Cf{
+  background-color: rgb(255, 255, 255);
+
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+
+body {
+ font-family: 'Open Sans', sans-serif;
+ height: 100vh;
+}
+
+
+.slider-container {
+ position: relative;
+ overflow: hidden;
+ width: 100vw;
+ height: 100vh;
+}
+
+
+.left-slide {
+ height: 100%;
+ width: 35%;
+ position: absolute;
+ top: 0;
+ left: 0;
+ transition: transform 0.5s ease-in-out;
+}
+
+
+.left-slide > div {
+ height: 100%;
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ color: #fff;
+}
+
+
+.left-slide h1 {
+ font-size: 40px;
+ margin-bottom: 10px;
+ margin-top: -30px;
+}
+
+
+.right-slide {
+ height: 100%;
+ position: absolute;
+ top: 0;
+ left: 35%;
+ width: 65%;
+ transition: transform 0.5s ease-in-out;
+}
+
+
+
+
+.right-slide > div {
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center center;
+ height: 100%;
+ width: 100%;
+}
+
+
+button {
+ background-color: #fff;
+ border: none;
+ color: #aaa;
+ cursor: pointer;
+ font-size: 16px;
+ padding: 15px;
+}
+
+
+button:hover {
+ color: #222;
+}
+
+
+button:focus {
+ outline: none;
+}
+
+
+.slider-container .action-buttons button {
+ position: absolute;
+ left: 35%;
+ top: 50%;
+ z-index: 100;
+}
+
+
+.slider-container .action-buttons .down-button {
+ transform: translateX(-100%);
+ border-top-left-radius: 5px;
+ border-bottom-left-radius: 5px;
+}
+
+
+.slider-container .action-buttons .up-button {
+ transform: translateY(-100%);
+ border-top-right-radius: 5px;
+ border-bottom-right-radius: 5px;
+}
+
+
+/*movimento*/
+.box {
+  background-color: steelblue;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 50;
+  margin: 5%;
+  border-radius: 10px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  transform: translateX(200%);
+  transition: transform 4s ease;
+  
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(-200%);
+}
+
+.box.show {
+  transform: translateX(0);
+}
+
+.box h2 {
+  font-size: 45px;
+}
+.TF{
+  width: 250px;
+  height: 250px;
+  
+}
